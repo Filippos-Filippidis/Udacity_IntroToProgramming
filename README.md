@@ -1,6 +1,6 @@
-# Udacity_IntroToProgramming
+# Udacity - Intro To Programming
 
-Projects for my Udacity Intro to Programming Nanodegree
+Projects for the Udacity Intro to Programming Nanodegree
 
 Stage 1: Webpages, Documents, and Structure
 
