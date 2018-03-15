@@ -1,14 +1,115 @@
-<!DOCTYPE html>>
+<!DOCTYPE html>
 <html lang="en">
+<!-- Start ProjectL: Make A Stylish Webpage -->
   <head>
-
-
-
+    <!-- Head:start -->
+    <meta charset="UTF-8">
+    <title> Audacity - Make a stylish webpage </title>
+    <link rel= "stylesheet" href="main.css">
   </head>
   <body>
+    <!-- Body:start -->
+    <!--First Box-->
+    <div class="TOC">
+      <!-- Title -->
+      <h1> Demystifying NURBS Geometry </h1>
+      <!-- Ordered List -->
+      <ol>
+        <li><a href="history of nurbs"> A brief History of <em>NURBS</em></a></li>
+        <li><a href="curve geometry"> Curve Geometry: <em>Nurbs Curves</em></a></li>
+        <!-- Unordered List -->
+        <ul>
+          <li><a href="curve geometry:degree"> Degree </a></li>
+          <li><a href="curve geometry:control points"> Control Points </a></li>
+          <li><a href="curve geometry:weight"> Weight </a></li>
+          <li><a href="curve geometry:knots"> Knots </a></li>
+          <li><a href="curve geometry:edit points"> Edit Points </a></li>
+        </ul>
+        <li><a href="surface geometry"> Surface Geometry:<em>Nurbs Surfaces</em></a></li>
+        <!-- Unordered List -->
+        <ul>
+          <li><a href="srf geometry:domain"> Surface Domain </a></li>
+          <li><a href="srf geometry:evaluation"> Surface Evaluation </a></li>
+          <li><a href="srf geometry:Vectors"> Normal Vectors and Tangent Planes </a></li>
+        </ul>
+    </div>
+    <!--Second Box-->
+    <div>
+      <h2 id="history of nurbs">A brief History of <em>NURBS</em></h2>
+      <p> NURBS (non-uniform rational B-splines) are mathematical representations that can
+        accurately model any shape from a simple 2D line, circle, arc, or box to the most
+        complex 3D free-form organic surface or solid. Because of their flexibility and accuracy,
+        NURBS models can be used in any process from illustration and animation to manufacturing.
+      </p>
+    </div>
+    <!--Third Box-->
+    <div>
+      <h2 id="curve geometry">Curve Geometry</h2>
+      <p>Since curves are geometric objects, they possess a number of properties or characteristics
+        which can be used to describe or analyze them. For example, every curve has a starting coordinate
+        and every curve has an ending coordinate. When the distance between these two coordinates is zero,
+        the curve is closed. Also, every curve has a number of control-points, if all these points are located
+        in the same plane, the curve as a whole is planar. Some properties apply to the curve as a whole, while
+        others only apply to specific points on the curve. For example, planarity is a global property while
+        tangent vectors are a local property. Also, some properties only apply to some curve types. So far we’ve
+        discussed some of Grasshopper’s Primitive Curve Components such as: lines, circles, ellipses, and arcs.
+      </p>
+      <p> Degree: The degree is a positive whole number. This number is usually 1, 2, 3 or 5, but can be any
+        positive whole number. The degree of the curve determines the range of influence the control points have
+        on a curve; where the higher the degree, the larger the range. NURBS lines and polylines are usually degree 1,
+         NURBS circles are degree 2, and most free-form curves are degree 3 or 5.
+      </p>
+
+      <p>Control Points: The control points are a list of at least degree+1 points. One of the easiest ways to change the
+        shape of a NURBS curve is to move its control points.
+      </p>
+
+      <p>Weight: Control points have an associated number called a weight . Weights are usually positive numbers.
+        When a curve’s control points all have the same weight (usually 1), the curve is called non-rational, otherwise the
+        curve is called rational. Most NURBS curves are non-rational. A few NURBS curves, such as circles and ellipses, are always rational.
+      </p>
+
+      <p>Knots: Knots are a list of (degree+N-1) numbers, where N is the number of control points.</p>
+
+      <p>Edit Points: Points on the curve evaluated at knot averages. Edit points are like control points except they are always located
+        on the curve and moving one edit point generally changes the shape of the entire curve (moving one control point only changes the
+        shape of the curve locally). Edit points are useful when you need a point on the interior of a curve to pass exactly through a certain location.
+      </p>
+
+    </div>
+    <!--Fourth Box-->
+    <div>
+      <h2 id="surface geometry">Surface Geometry</h2>
+      <p>Apart from a few primitive surface types such as spheres, cones, planes and cylinders, Rhino supports three kinds of freeform surface types,
+        the most useful of which is the NURBS surface. Similar to curves, all possible surface shapes can be represented by a NURBS surface, and this is
+        the default fall-back in Rhino. It is also by far the most useful surface definition and the one we will be focusing on.
+        <br>
+        <br>
+        NURBS surfaces are very similar to NURBS curves. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties,
+        but there are some distinct differences. For example, curves have tangent vectors and normal planes, whereas surfaces have normal vectors and tangent planes.
+        This means that curves lack orientation while surfaces lack direction. In the case of NURBS surfaces, there are in fact two directions implied by the geometry,
+        because NURBS surfaces are rectangular grids of {u} and {v} curves. And even though these directions are often arbitrary, we end up using them anyway because they make life so much easier for us.
+      </p>
+
+      <p>Surface Domain A surface domain is defined as the range of (u,v) parameters that evaluate into a 3-D point on that surface. The domain in each dimension (u or v)
+        is usually described as two real numbers (u_min to u_max) and (v_min to v_max) Changing a surface domain is referred to as reparameterizing the surface.In Grasshopper,
+        it is often useful to reparameterize NURBS surfaces so that the u and v domains both range from 0 to 1. This allows us to easily evaluate and operate on the surface.
+      </p>
+
+      <p>Surface evaluation Evaluating a surface at a parameter that is within the surface domain results in a point that is on the surface. Keep in mind that the middle of the
+        domain (mid-u, mid-v) might not necessarily evaluate to the middle point of the 3D surface. Also, evaluating u- and v-values that are outside the surface domain will not
+        give a useful result.
+      </p>
+
+      <p>Normal Vectors and Tangent Planes The tangent plane to a surface at a given point is the plane that touches the surface at that point. The z-direction of the tangent plane
+        represents the normal direction of the surface at that point.Grasshopper handles NURBS surfaces similarly to the way that Rhino does because it is built on the same core of
+        operations needed to generate the surface. However, because Grasshopper is displaying the surface on top of the Rhino viewport (which is why you can’t really select any of
+        the geometry created through Grasshopper in the viewport until you bake the results into the scene) some of the mesh settings are slightly lower in order to keep the speed
+        of the Grasshopper results fairly high. You may notice some faceting in your surface meshes, but this is to be expected and is only a result of Grasshopper’s drawing settings.
+        Any baked geometry will still use the higher mesh settings.</p>
 
 
-
+    </div>
 
   </body>
 </html>
