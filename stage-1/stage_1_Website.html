@@ -17,34 +17,36 @@
         <!-- TOC -->
         <h2> Contents </h2>
         <!-- Ordered List -->
-        <ol  >
-          <li><a href="#history of nurbs" title="Go to section"> A brief History of <em>NURBS</em></a></li>
-          <li><a href="#curve geometry" title="Go to section"> Curve Geometry: <em>Nurbs Curves</em></a></li>
+        <ol>
+          <li><a href="#historyOfNurbs" title="Go to section"> A brief History of <em>NURBS</em></a></li>
+          <li><a href="#curveGeometry" title="Go to section"> Curve Geometry: <em>Nurbs Curves</em></a>
           <!-- Unordered List -->
-          <ul>
-            <li><h4> Degree </h4></li>
-            <li><h4> Control Points </h4></li>
-            <li><h4> Weight </h4></li>
-            <li><h4> Knots </h4></li>
-            <li><h4> Edit Points </h4></li>
-          </ul>
-          <li><a href="#surface geometry" title="Go to section"> Surface Geometry:<em>Nurbs Surfaces</em></a></li>
+            <ul>
+              <li><h4> Degree </h4></li>
+              <li><h4> Control Points </h4></li>
+              <li><h4> Weight </h4></li>
+              <li><h4> Knots </h4></li>
+              <li><h4> Edit Points </h4></li>
+            </ul>
+          </li>
+          <li><a href="#surfaceGeometry" title="Go to section"> Surface Geometry:<em>Nurbs Surfaces</em></a>
           <!-- Unordered List -->
-          <ul>
-            <li><h4> Surface Domain </h4></li>
-            <li><h4> Surface Evaluation </h4></li>
-            <li><h4> Normal Vectors and Tangent Planes </h4></li>
-          </ul>
+            <ul>
+              <li><h4> Surface Domain </h4></li>
+              <li><h4> Surface Evaluation </h4></li>
+              <li><h4> Normal Vectors and Tangent Planes </h4></li>
+            </ul>
+          </li>
        </ol>
       </div>
       <div id=box1A class = "TOC">
-        <iframe width="900" height="315" src="https://www.youtube.com/embed/v908Wrz4mOA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe width="900" height="315" src="https://www.youtube.com/embed/v908Wrz4mOA" allowfullscreen></iframe>
       </div>
     </div>
     <br>
     <!--Second Box-->
     <div class = "geometry" id=box2>
-      <h2 id="history of nurbs">A brief history of <em>NURBS</em></h2>
+      <h2 id="historyOfNurbs">A brief history of <em>NURBS</em></h2>
       <p> <b>NURBS (non-uniform rational B-splines) are mathematical representations that can
         accurately model any shape from a simple 2D line, circle, arc, or box to the most
         complex 3D free-form organic surface or solid. Because of their flexibility and accuracy,
@@ -56,12 +58,12 @@
       </p>
       <br>
       <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_001-curve-types.png" border="0" alt=" photo 1-4-1_001-curve-types.png"/></a>
+      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_001-curve-types.png" alt=" photo 1-4-1_001-curve-types.png"/>
     </div>
     <br>
     <!--Third Box-->
     <div class = "geometry" id=box3>
-      <h2 id="curve geometry">Curve Geometry</h2>
+      <h2 id="curveGeometry">Curve Geometry</h2>
       <p><b>Since curves are geometric objects, they possess a number of properties or characteristics
         which can be used to describe or analyze them. For example, every curve has a starting coordinate
         and every curve has an ending coordinate. When the distance between these two coordinates is zero,
@@ -73,7 +75,7 @@
       </p>
       <br>
       <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_002-bezier-curve.png" border="0" alt=" photo 1-4-1_002-bezier-curve.png"/></a>
+      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_002-bezier-curve.png" alt=" photo 1-4-1_002-bezier-curve.png"/>
       <br>
       <br>
       <p> Degree: The degree is a positive whole number. This number is usually 1, 2, 3 or 5, but can be any
@@ -99,30 +101,30 @@
       </p>
       <br>
       <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_003-degree-one.png" border="0" alt=" photo 1-4-1_003-degree-one.png"/></a>
+      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_003-degree-one.png" alt=" photo 1-4-1_003-degree-one.png"/>
       <br>
       <br>
       <br>
       <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_005-degree-three.png" border="0" alt=" photo 1-4-1_005-degree-three.png"/></a>
+      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_005-degree-three.png" alt=" photo 1-4-1_005-degree-three.png"/>
       <br>
       <br>
       <br>
       <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_004-degree-two.png" border="0" alt=" photo 1-4-1_004-degree-two.png"/></a>
+      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_004-degree-two.png" alt=" photo 1-4-1_004-degree-two.png"/>
       <br>
       <br>
     </div>
     <br>
     <!--Fourth Box-->
     <div class = "geometry" id = box4>
-      <h2 id="surface geometry">Surface Geometry</h2>
+      <h2 id="surfaceGeometry">Surface Geometry</h2>
       <p><b>Apart from a few primitive surface types such as spheres, cones, planes and cylinders, Rhino supports three kinds of freeform surface types,
         the most useful of which is the NURBS surface. Similar to curves, all possible surface shapes can be represented by a NURBS surface, and this is
         the default fall-back in Rhino. It is also by far the most useful surface definition and the one we will be focusing on.</b>
         <br>
         <br>
-        <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_001-primitives.png" border="0" alt=" photo 1-5-1_001-primitives.png"/></a>
+        <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_001-primitives.png" alt=" photo 1-5-1_001-primitives.png"/>
         <br>
         <br>
         NURBS surfaces are very similar to NURBS curves. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties,
@@ -132,7 +134,7 @@
       </p>
       <br>
       <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_002-nurbs-surface.png" border="0" alt=" photo 1-5-1_002-nurbs-surface.png"/></a>
+      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_002-nurbs-surface.png" alt=" photo 1-5-1_002-nurbs-surface.png"/>
       <br>
       <br>
       <p>Surface Domain A surface domain is defined as the range of (u,v) parameters that evaluate into a 3-D point on that surface. The domain in each dimension (u or v)
@@ -141,7 +143,7 @@
       </p>
       <br>
       <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_003-surface-domain.png" border="0" alt=" photo 1-5-1_003-surface-domain.png"/></a>
+      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_003-surface-domain.png" alt=" photo 1-5-1_003-surface-domain.png"/>
       <br>
       <br>
       <p>Surface evaluation Evaluating a surface at a parameter that is within the surface domain results in a point that is on the surface. Keep in mind that the middle of the
@@ -150,7 +152,7 @@
       </p>
       <br>
       <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_004-surface-eval.png" border="0" alt=" photo 1-5-1_004-surface-eval.png"/></a>
+      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_004-surface-eval.png" alt=" photo 1-5-1_004-surface-eval.png"/>
       <br>
       <br>
       <p>Normal Vectors and Tangent Planes The tangent plane to a surface at a given point is the plane that touches the surface at that point. The z-direction of the tangent plane

@@ -14,7 +14,7 @@
     display: flex;
 }
 
-{
+*{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -51,7 +51,7 @@
     border-radius: 25px;
     border: 2px solid MediumSeagreen;
     padding: 20px;
-    width: 1350;
+    width: 1350px;
     height: 1475px;
 }
 
@@ -59,7 +59,7 @@
     border-radius: 25px;
     border: 2px solid MediumSeagreen;
     padding: 20px;
-    width: 1350;
+    width: 1350px;
     height: 1575px;
 }
 
