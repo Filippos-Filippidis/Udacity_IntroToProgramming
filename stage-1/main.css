@@ -1,0 +1,98 @@
+/* This is the CSS doc.*/
+
+.TOC{
+  font-family: Helvetica;
+}
+
+.geometry{
+  font-family: Helvetica;
+  color:grey;
+}
+
+.b1 {
+    display: -webkit-flex;
+    display: flex;
+}
+
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#box1{
+    border-radius: 25px;
+    border: 2px solid MediumSeagreen;
+    padding: 20px;
+    max-width: 400px;
+    height: 325px;
+}
+
+#box1A{
+    border-radius: 25px;
+    border: 2px solid MediumSeagreen;
+    padding: 20px;
+    padding-right:70px;
+    max-width: 100%;
+    height: 325px;
+}
+
+#box2{
+    border-radius: 25px;
+    border: 2px solid MediumSeagreen;
+    padding: 20px;
+    max-width: 100%;
+    min-width: 400px;
+
+}
+
+#box3{
+    border-radius: 25px;
+    border: 2px solid MediumSeagreen;
+    padding: 20px;
+    width: 1350;
+    height: 1475px;
+}
+
+#box4{
+    border-radius: 25px;
+    border: 2px solid MediumSeagreen;
+    padding: 20px;
+    width: 1350;
+    height: 1575px;
+}
+
+h1{
+  font-family: Helvetica;
+  background-color: MediumSeagreen;
+  color:white;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+  padding-left:20px;
+}
+
+h2{
+  color:MediumSeagreen;
+  text-decoration: underline;
+}
+
+h4 {
+  margin: 5px;
+  color:MediumSeagreen;
+}
+
+ul{
+  list-style-type:none;
+}
+
+img {
+    max-width: 60%;
+    min-width: 400px;
+    margin: 0px;
+    /*Sets all images to a minimum size (based on pixels) and maximum size (percentage-based on browser window)*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*Centers the images*/
+}
