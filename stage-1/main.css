@@ -14,6 +14,11 @@
     display: flex;
 }
 
+.pull-left{
+  float: left;
+  padding-right:30px;
+}
+
 *{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -26,7 +31,7 @@
     border: 2px solid MediumSeagreen;
     padding: 20px;
     max-width: 400px;
-    height: 325px;
+    height: 400px;
 }
 
 #box1A{
@@ -35,7 +40,7 @@
     padding: 20px;
     padding-right:70px;
     max-width: 100%;
-    height: 325px;
+    height: 400;
 }
 
 #box2{
@@ -51,7 +56,7 @@
     border-radius: 25px;
     border: 2px solid MediumSeagreen;
     padding: 20px;
-    width: 1350px;
+    width: 100%;
     height: 1475px;
 }
 
@@ -59,8 +64,8 @@
     border-radius: 25px;
     border: 2px solid MediumSeagreen;
     padding: 20px;
-    width: 1350px;
-    height: 1575px;
+    width: 100%;
+    height: 1600px;
 }
 
 h1{
