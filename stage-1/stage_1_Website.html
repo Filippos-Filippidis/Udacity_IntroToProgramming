@@ -57,9 +57,7 @@
         A great article to go read through covering the nurbs lineage can be found at this
         <a href="http://www.alatown.com/spline-history-architecture/" title="Go to article"> Link</a>
       </p>
-      <br>
-      <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_001-curve-types.png" alt=" photo 1-4-1_001-curve-types.png"/>
+      <img class = "image" src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_001-curve-types.png" alt=" Different Curves Types"/>
     </div>
     <br>
     <!--Third Box-->
@@ -74,11 +72,7 @@
         tangent vectors are a local property. Also, some properties only apply to some curve types. So far we’ve
         discussed some of Grasshopper’s Primitive Curve Components such as: lines, circles, ellipses, and arcs.</b>
       </p>
-      <br>
-      <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_002-bezier-curve.png" alt=" photo 1-4-1_002-bezier-curve.png"/>
-      <br>
-      <br>
+      <img class = "image" src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_002-bezier-curve.png" alt=" Bezier Curve"/>
       <p> Degree: The degree is a positive whole number. This number is usually 1, 2, 3 or 5, but can be any
         positive whole number. The degree of the curve determines the range of influence the control points have
         on a curve; where the higher the degree, the larger the range. NURBS lines and polylines are usually degree 1,
@@ -100,21 +94,9 @@
         on the curve and moving one edit point generally changes the shape of the entire curve (moving one control point only changes the
         shape of the curve locally). Edit points are useful when you need a point on the interior of a curve to pass exactly through a certain location.
       </p>
-      <br>
-      <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_003-degree-one.png" alt=" photo 1-4-1_003-degree-one.png"/>
-      <br>
-      <br>
-      <br>
-      <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_005-degree-three.png" alt=" photo 1-4-1_005-degree-three.png"/>
-      <br>
-      <br>
-      <br>
-      <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_004-degree-two.png" alt=" photo 1-4-1_004-degree-two.png"/>
-      <br>
-      <br>
+      <img class = "image" src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_003-degree-one.png" alt=" Degree 1 Curve"/>
+      <img class = "image" src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_005-degree-three.png" alt=" Degree 3 Curve"/>
+      <img class = "image" src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-4-1_004-degree-two.png" alt=" Degree 2 Curve"/>
     </div>
     <br>
     <!--Fourth Box-->
@@ -123,39 +105,23 @@
       <p><b>Apart from a few primitive surface types such as spheres, cones, planes and cylinders, Rhino supports three kinds of freeform surface types,
         the most useful of which is the NURBS surface. Similar to curves, all possible surface shapes can be represented by a NURBS surface, and this is
         the default fall-back in Rhino. It is also by far the most useful surface definition and the one we will be focusing on.</b>
-        <br>
-        <br>
-        <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_001-primitives.png" alt=" photo 1-5-1_001-primitives.png"/>
-        <br>
-        <br>
+        <img class = "image" src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_001-primitives.png" alt=" Primitive Geometry"/>
         NURBS surfaces are very similar to NURBS curves. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties,
         but there are some distinct differences. For example, curves have tangent vectors and normal planes, whereas surfaces have normal vectors and tangent planes.
         This means that curves lack orientation while surfaces lack direction. In the case of NURBS surfaces, there are in fact two directions implied by the geometry,
         because NURBS surfaces are rectangular grids of {u} and {v} curves. And even though these directions are often arbitrary, we end up using them anyway because they make life so much easier for us.
       </p>
-      <br>
-      <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_002-nurbs-surface.png" alt=" photo 1-5-1_002-nurbs-surface.png"/>
-      <br>
-      <br>
+      <img class = "image" src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_002-nurbs-surface.png" alt=" Nurbs Surface"/>
       <p>Surface Domain A surface domain is defined as the range of (u,v) parameters that evaluate into a 3-D point on that surface. The domain in each dimension (u or v)
         is usually described as two real numbers (u_min to u_max) and (v_min to v_max) Changing a surface domain is referred to as reparameterizing the surface.In Grasshopper,
         it is often useful to reparameterize NURBS surfaces so that the u and v domains both range from 0 to 1. This allows us to easily evaluate and operate on the surface.
       </p>
-      <br>
-      <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_003-surface-domain.png" alt=" photo 1-5-1_003-surface-domain.png"/>
-      <br>
-      <br>
+      <img class = "image" src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_003-surface-domain.png" alt=" Surface Domain"/>
       <p>Surface evaluation Evaluating a surface at a parameter that is within the surface domain results in a point that is on the surface. Keep in mind that the middle of the
         domain (mid-u, mid-v) might not necessarily evaluate to the middle point of the 3D surface. Also, evaluating u- and v-values that are outside the surface domain will not
         give a useful result.
       </p>
-      <br>
-      <br>
-      <img src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_004-surface-eval.png" alt=" photo 1-5-1_004-surface-eval.png"/>
-      <br>
-      <br>
+      <img class = "image" src="http://i1195.photobucket.com/albums/aa395/phil_pidis/1-5-1_004-surface-eval.png" alt=" Evaluate Surface"/>
       <p>Normal Vectors and Tangent Planes The tangent plane to a surface at a given point is the plane that touches the surface at that point. The z-direction of the tangent plane
         represents the normal direction of the surface at that point.Grasshopper handles NURBS surfaces similarly to the way that Rhino does because it is built on the same core of
         operations needed to generate the surface. However, because Grasshopper is displaying the surface on top of the Rhino viewport (which is why you can’t really select any of
