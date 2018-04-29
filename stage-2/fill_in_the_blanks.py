@@ -1,6 +1,7 @@
 def level(userChoice):
 
     # Levels
+    ''' All text levels defined for the game'''
     if userChoice == "easy":
         text = '''Basketball is a ___1___ sport. Two teams of ___2___ players each try to score by shooting a
          ___3___ through a hoop elevated 10 feet above the ground.The game is played on a rectangular floor called the
@@ -21,7 +22,7 @@ def level(userChoice):
     return text
 
 def answers(userChoice):
-
+    '''Answers to specific level selection'''
     if userChoice == "easy":
         answer = ["team", "five", "ball", "court"]
     elif userChoice == "medium":
@@ -33,7 +34,7 @@ def answers(userChoice):
 
 
 def difficultyLevel():
-
+    '''User to define difficulty level'''
     print "Please select the game difficulty by typing it in!"
     d_Level = raw_input("Possible choices include easy, medium, and hard.")
     print " "
@@ -49,10 +50,9 @@ def difficultyLevel():
 
 
 def falseTries():
-
+    '''User to define number of possible tries'''
     # Number of false tries
     tries = input("How many wrong guesses do you want to make before losing?")
-
     return tries
 
 
@@ -80,6 +80,7 @@ def fill_string(blankNum,text,userAnswer):
 
 
 def playGame():
+    ''' Main function to play the game'''
 
     # Select difficulty level
     userDifficulty = difficultyLevel()
