@@ -18,7 +18,6 @@ def level(userChoice):
         A ___3___ will toss the ball up between the two. The player that gets his hands on the ball will tip it to a
         ___4___. This is called a tip-off. In addition to ___5___ the ball from an opposing player, there are other
         ways for a team to get the ball.'''
-
     return text
 
 def answers(userChoice):
