@@ -107,6 +107,13 @@ def fill_string(blankNum,text,userAnswer):
     return new_text
 
 def userCalls():
+    """
+    A function to pack the user defined Preferences
+
+    Returns: Chosen Difficulty Level, Number of tries before loosing, the text
+    to be used and the answers for that text
+
+    """
 
     # Select difficulty level
     userDifficulty = difficultyLevel()
@@ -121,6 +128,13 @@ def userCalls():
     return userDifficulty, tries, text, answer
 
 def logic(blankNum, ans, tries, text, answer):
+    """
+    A function that compiles the logic and main functionality of the game.
+
+    Args: The text and answers to be used, the number of tries and counters for
+    the game flow
+
+    """
 
     while blankNum <= len(answer):
         userInput = raw_input("What should be substituted in for ___" + str(blankNum) + "___.")
