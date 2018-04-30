@@ -1,7 +1,13 @@
 def level(userChoice):
 
     # Levels
-    ''' All text levels defined for the game'''
+    """
+
+    All text levels defined for the game
+
+    Returns: String selected
+
+    """
     if userChoice == "easy":
         text = '''Basketball is a ___1___ sport. Two teams of ___2___ players each try to score by shooting a
          ___3___ through a hoop elevated 10 feet above the ground.The game is played on a rectangular floor called the
@@ -21,7 +27,13 @@ def level(userChoice):
     return text
 
 def answers(userChoice):
-    '''Answers to specific level selection'''
+    """
+    The correct answers for the specific level selection
+    chosen by the player.
+
+    Returns: list of answers
+
+    """
     if userChoice == "easy":
         answer = ["team", "five", "ball", "court"]
     elif userChoice == "medium":
@@ -33,13 +45,17 @@ def answers(userChoice):
 
 
 def difficultyLevel():
-    '''User to define difficulty level'''
+    """
+    User to define difficulty level
+    Selected level is returned to proceed with game
+
+    """
     print "Please select the game difficulty by typing it in!"
     d_Level = raw_input("Possible choices include easy, medium, and hard.")
     print " "
 
     # Incorrect Level Assignment
-    while d_Level != "easy" and d_Level != "medium" and d_Level != "hard":
+    while d_Level.lower() != "easy" and d_Level.lower() != "medium" and d_Level.lower() != "hard":
         print "That's not an option"
         print "Please select a game difficulty by typing it in"
         d_Level = raw_input("Possible choices include easy, medium, and hard.")
@@ -49,14 +65,20 @@ def difficultyLevel():
 
 
 def falseTries():
-    '''User to define number of possible tries'''
+    '''User to define number of possible tries before losing the game'''
     # Number of false tries
     tries = input("How many wrong guesses do you want to make before losing?")
     return tries
 
 
 def word_in_pos(blankNum,word):
-    """Find Blanks to be substituted"""
+    """
+    This function checks to find the numbered blanks
+    :param blankNum: the blank at which we are at
+    :param word: word of the text at which we are currently searching
+    :return: the blank to be replaced
+
+    """
     if word == "___"+str(blankNum)+"___":
         return word
     else:
@@ -64,7 +86,14 @@ def word_in_pos(blankNum,word):
 
 
 def fill_string(blankNum,text,userAnswer):
-    """Switch words btween original and user answers"""
+    """
+    This function initializes the replacement of the blanks with a user defined value
+    :param blankNum: the blank at which we are at
+    :param text: the text selected from easy / medium / hard
+    :param userAnswer: user defined word
+    :return: the modified text
+
+    """
     new_ml_string = []
     ml_string = text.split()
     for word in ml_string:
@@ -77,9 +106,7 @@ def fill_string(blankNum,text,userAnswer):
     new_text = " ".join(new_ml_string)
     return new_text
 
-
-def playGame():
-    ''' Main function to play the game'''
+def userCalls():
 
     # Select difficulty level
     userDifficulty = difficultyLevel()
@@ -87,23 +114,18 @@ def playGame():
     # Number of false tries
     tries = falseTries()
 
-    #Set Level
+    # Set Level
     text = level(userDifficulty)
     answer = answers(userDifficulty)
 
-    # Print User Preferences
-    print " "
-    print "You have chosen to play the " + userDifficulty + " level with " + str(tries) + " attempts per blank"
-    print "The current paragraph reads as such:"
-    print " "
-    print text
+    return userDifficulty, tries, text, answer
 
-    blankNum = 1
-    ans = 1
+def logic(blankNum, ans, tries, text, answer):
+
     while blankNum <= len(answer):
         userInput = raw_input("What should be substituted in for ___" + str(blankNum) + "___.")
         index = blankNum - 1
-        if userInput == answer[index]:
+        if userInput.lower() == answer[index]:
             print "Correct!"
             text = fill_string(blankNum, text, userInput)
             blankNum += 1
@@ -118,5 +140,31 @@ def playGame():
         print text
         if blankNum > len(answer):
             print "Congratulations You WON!!"
+
+
+
+def playGame():
+    """ This function is the Main() function of the game.
+    Initializing this sets up basic parameters and further calls to play the game .
+    """
+
+    # User Option Calls
+    prefs = userCalls()
+    userDifficulty, tries, text, answer = prefs[0], prefs[1], prefs[2], prefs[3]
+
+    # Print User Preferences
+    print " "
+    print "You have chosen to play the " + userDifficulty + " level with " + str(tries) + " attempts per blank"
+    print "The current paragraph reads as such:"
+    print " "
+    print text
+
+    blankNum = 1
+    ans = 1
+
+    logic(blankNum, ans, tries, text, answer)
+
+
+
 
 playGame()
