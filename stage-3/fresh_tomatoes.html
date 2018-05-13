@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Fresh Tomatoes!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+        }
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+            margin-bottom: 20px;
+            padding-top: 20px;
+        }
+        .movie-tile:hover {
+            background-color: #EEE;
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Sci Fi Movie Trailers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="DyLUwOcR5pk" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/d/d7/District_nine_ver2.jpg" width="220" height="342">
+    <h2>District 9</h2>
+    <div>The story, which explores themes of humanity, xenophobia, and social segregation, begins in an alternate 1982, when an alien ship appears over Johannesburg, South Africa</div>
+    <img src="http://i.imgur.com/espB8pV.png">
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="XYGzRB4Pnq8" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Ex-machina-uk-poster.jpg" width="220" height="342">
+    <h2>Ex Machina</h2>
+    <div>Caleb Smith wins a contest that enables him to spend a week at the private estate of Nathan Bateman. When he arrives, Caleb learns he is to determine the capabilities and consciousness of Ava, a beautiful robot. However, it soon becomes evident that Ava is far more self-aware and deceptive than either man imagined</div>
+    <img src="http://i.imgur.com/cYpHynU.png">
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="eogpIG53Cis" data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Blade_Runner_poster.jpg" width="220" height="342">
+    <h2>Blade Runner</h2>
+    <div>Deckard is forced by the police Boss to continue his old job as Replicant Hunter. His assignment: eliminate four escaped Replicants from the colonies who have returned to Earth. Before starting the job, Deckard goes to the Tyrell Corporation and he meets Rachel, a Replicant girl he falls in love with.</div>
+    <img src="http://i.imgur.com/cYpHynU.png">
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="cdLl1GVjOrc" data-toggle="modal" data-target="#trailer">
+    <img src="https://resizing.flixster.com/iRABduPrqxHFlSDcW4h_cEToY3Q=/206x305/v1.bTsxMTE5MTI3NjtqOzE3NzY5OzEyMDA7NTA5Ozc1NQ" width="220" height="342">
+    <h2>Mad Max</h2>
+    <div>Years after the collapse of civilization, the tyrannical Immortan Joe enslaves apocalypse survivors inside the desert fortress the Citadel. When the warrior Imperator Furiosa leads the despot's five wives in a daring escape, she forges an alliance with Max Rockatansky, a loner and former captive. Fortified in the massive, armored truck the War Rig, they try to outrun the ruthless warlord and his henchmen in a deadly high-speed chase through the Wasteland.</div>
+    <img src="http://i.imgur.com/HCYFJht.png">
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="taMnCjzKgd8" data-toggle="modal" data-target="#trailer">
+    <img src="https://resizing.flixster.com/Mc6Z4huvaWUYkKNhBDqRCd5PIuM=/206x305/v1.bTsxMTE2Njc4ODtqOzE3NzY5OzEyMDA7ODAwOzEyMDA" width="220" height="342">
+    <h2>E.T. THE EXTRA-TERRESTRIAL</h2>
+    <div>After a gentle alien becomes stranded on Earth, the being is discovered and befriended by a young boy named Elliott. Bringing the extraterrestrial into his suburban California house, Elliott introduces E.T., as the alien is dubbed, to his brother and his little sister, Gertie, and the children decide to keep its existence a secret. Soon, however, E.T. falls ill, resulting in government intervention and a dire situation for both Elliott and the alien.</div>
+    <img src="http://i.imgur.com/8RHeC2D.png">
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="OiTiKOy59o4" data-toggle="modal" data-target="#trailer">
+    <img src="https://resizing.flixster.com/Qr71qDsGLUaU69il9kWl4u1pB5M=/206x305/v1.bTsxMTE3NjQ1MDtqOzE3NzY5OzEyMDA7ODAwOzEyMDA" width="220" height="342">
+    <h2>GRAVITY</h2>
+    <div>Dr. Ryan Stone is a medical engineer on her first shuttle mission. Her commander is veteran astronaut Matt Kowalsky, helming his last flight before retirement. Then, during a routine space walk by the pair, disaster strikes: The shuttle is destroyed, leaving Ryan and Matt stranded in deep space with no link to Earth and no hope of rescue. As fear turns to panic, they realize that the only way home may be to venture further into space.</div>
+    <img src="http://i.imgur.com/2AmVX0u.png">
+</div>
+
+    </div>
+  </body>
+</html>
